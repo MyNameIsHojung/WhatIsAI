@@ -9,7 +9,8 @@
       "1부 · LLM의 원리와 한계",
       "2부 · 한계를 넘는 확장 도구",
       "3부 · 실전 활용법",
-      "4부 · 요즘 LLM 현황"
+      "4부 · 요즘 LLM 현황",
+      "마무리"
     ]
   },
   "ui": {
@@ -1485,7 +1486,7 @@
     },
     {
       "id": "outro",
-      "part": 4,
+      "part": 5,
       "emoji": "🗺️",
       "image": "assets/img/outro.png",
       "kicker": "정리",
@@ -1537,7 +1538,7 @@
     },
     {
       "id": "credits",
-      "part": 4,
+      "part": 5,
       "emoji": "🤝",
       "image": "assets/img/credits.png",
       "kicker": "만든 과정",
