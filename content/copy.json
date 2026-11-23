@@ -11,7 +11,14 @@
       "3부 · 실전 활용법",
       "4부 · 요즘 LLM 현황",
       "마무리"
-    ]
+    ],
+    "thanks": {
+      "title": "감사합니다",
+      "subtitle": "궁금한 점이 있으면 편하게 물어봐 주세요.",
+      "back": "처음으로",
+      "emoji": "🙏",
+      "image": "assets/img/thanks.png"
+    }
   },
   "ui": {
     "takeaway": "💡 한 줄 요약",
@@ -20,7 +27,11 @@
     "keys": "← → 방향키로도 넘길 수 있어요.",
     "discuss": "🗣 같이 이야기해 봐요",
     "nextSlide": "다음으로 넘어가기 →",
-    "toc": "목차"
+    "toc": "목차",
+    "fullscreen": "⛶ 전체화면",
+    "exitFullscreen": "✕ 전체화면 끝내기",
+    "examples": "🧩 실제로는 이렇게 쓰여요",
+    "close": "닫기"
   },
   "tools": [
     {
@@ -542,7 +553,38 @@
       "data": {
         "tools": true
       },
-      "discuss": "여러분이 지금 주로 쓰시는 AI에는 어떤 도구(손발)들이 달려 있을까요?"
+      "discuss": "여러분이 지금 주로 쓰시는 AI에는 어떤 도구(손발)들이 달려 있을까요?",
+      "examples": [
+        {
+          "name": "웹 검색",
+          "when": "ChatGPT, Claude, Gemini 앱의 검색 기능이에요. 모델이 배우지 못한 최신 정보를 물을 때 쓰여요.",
+          "emoji": "🔎",
+          "links": [
+            {
+              "label": "ChatGPT",
+              "url": "https://chatgpt.com"
+            },
+            {
+              "label": "Claude",
+              "url": "https://claude.ai"
+            },
+            {
+              "label": "Gemini",
+              "url": "https://gemini.google.com"
+            }
+          ]
+        },
+        {
+          "emoji": "📊",
+          "name": "코드 실행",
+          "when": "엑셀이나 CSV 파일을 올리면 AI가 직접 코드를 돌려 그래프와 통계를 냅니다. 계산이 정확해야 할 때 쓰여요."
+        },
+        {
+          "emoji": "🖱️",
+          "name": "화면 조작",
+          "when": "AI가 브라우저를 직접 클릭하고 입력해요. 연동 기능이 없는 사이트에서 반복 작업을 할 때 쓰여요."
+        }
+      ]
     },
     {
       "id": "rag",
@@ -621,7 +663,36 @@
             "open": "PR은 400줄 이하로 올려주세요. 리뷰어 1명 이상의 승인이 있어야 합니다."
           }
         ]
-      }
+      },
+      "examples": [
+        {
+          "name": "NotebookLM",
+          "when": "올려둔 자료만 근거로 답하고 출처를 표시해 줘요. 긴 문서나 회의록을 정리할 때 쓰여요.",
+          "emoji": "📓",
+          "links": [
+            {
+              "label": "NotebookLM",
+              "url": "https://notebooklm.google.com"
+            }
+          ]
+        },
+        {
+          "emoji": "🏢",
+          "name": "사내 문서 챗봇",
+          "when": "위키와 규정 문서를 찾아서 답해요. 휴가 규정이나 장애 대응 절차를 물을 때 쓰여요."
+        },
+        {
+          "name": "Cursor의 코드 검색",
+          "when": "큰 저장소에서 관련 파일을 먼저 찾아 읽고 답해요.",
+          "emoji": "🗂️",
+          "links": [
+            {
+              "label": "Cursor",
+              "url": "https://cursor.com"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "loop",
@@ -706,7 +777,58 @@
           }
         ]
       },
-      "discuss": "가만히 보면 우리가 실제로 버그 잡을 때의 모습이랑 꽤 닮지 않았나요?"
+      "discuss": "가만히 보면 우리가 실제로 버그 잡을 때의 모습이랑 꽤 닮지 않았나요?",
+      "examples": [
+        {
+          "name": "Claude Code, Codex, Cursor",
+          "when": "코딩 에이전트예요. 버그 수정, 테스트 작성, 리팩터링을 맡길 때 쓰여요.",
+          "emoji": "💻",
+          "links": [
+            {
+              "label": "Claude Code",
+              "url": "https://claude.com/claude-code"
+            },
+            {
+              "label": "Codex",
+              "url": "https://openai.com/codex"
+            },
+            {
+              "label": "Cursor",
+              "url": "https://cursor.com"
+            }
+          ]
+        },
+        {
+          "name": "딥 리서치",
+          "when": "ChatGPT, Gemini, Claude의 조사 기능이에요. 웹페이지 수십 개를 읽고 보고서를 써 줍니다.",
+          "emoji": "📚",
+          "links": [
+            {
+              "label": "ChatGPT",
+              "url": "https://chatgpt.com"
+            },
+            {
+              "label": "Gemini",
+              "url": "https://gemini.google.com"
+            },
+            {
+              "label": "Claude",
+              "url": "https://claude.ai"
+            }
+          ]
+        },
+        {
+          "name": "GitHub Copilot 코딩 에이전트",
+          "when": "이슈를 배정하면 알아서 작업한 뒤 PR을 올려요.",
+          "emoji": "🎫",
+          "links": [
+            {
+              "label": "GitHub Copilot",
+              "url": "https://github.com/features/copilot"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "mcp",
@@ -797,7 +919,53 @@
           }
         ]
       },
-      "discuss": "우리 팀이 매일 쓰는 서비스 중에 AI한테 딱 꽂아주고 싶은 게 있다면 뭘까요?"
+      "discuss": "우리 팀이 매일 쓰는 서비스 중에 AI한테 딱 꽂아주고 싶은 게 있다면 뭘까요?",
+      "examples": [
+        {
+          "name": "GitHub MCP",
+          "when": "PR과 이슈를 읽고 쓸 수 있게 해요. 리뷰 요약이나 이슈 정리를 시킬 때 쓰여요.",
+          "emoji": "🔀",
+          "links": [
+            {
+              "label": "GitHub MCP 서버",
+              "url": "https://github.com/github/github-mcp-server"
+            }
+          ]
+        },
+        {
+          "name": "Playwright MCP",
+          "when": "AI가 브라우저를 띄워 화면을 직접 눌러봐요. 만든 화면이 제대로 동작하는지 확인할 때 쓰여요.",
+          "emoji": "🎭",
+          "links": [
+            {
+              "label": "Playwright MCP",
+              "url": "https://github.com/microsoft/playwright-mcp"
+            }
+          ]
+        },
+        {
+          "name": "Slack, Notion, Jira MCP",
+          "when": "메시지, 문서, 티켓을 연결해요. '어제 논의 요약해서 티켓으로 만들어 줘' 같은 부탁에 쓰여요.",
+          "emoji": "💬",
+          "links": [
+            {
+              "label": "MCP 서버 모음",
+              "url": "https://github.com/modelcontextprotocol/servers"
+            }
+          ]
+        },
+        {
+          "name": "데이터베이스 MCP",
+          "when": "말로 물으면 AI가 조회문을 만들어 실행해요. 보통은 읽기 전용으로 연결합니다.",
+          "emoji": "🗄️",
+          "links": [
+            {
+              "label": "MCP 서버 모음",
+              "url": "https://github.com/modelcontextprotocol/servers"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "skills",
@@ -889,7 +1057,36 @@
           }
         ]
       },
-      "discuss": "새로운 분이 오실 때마다 입 아프게 설명해야 하는 우리 팀만의 암묵적인 룰은 뭐가 있나요?"
+      "discuss": "새로운 분이 오실 때마다 입 아프게 설명해야 하는 우리 팀만의 암묵적인 룰은 뭐가 있나요?",
+      "examples": [
+        {
+          "emoji": "📄",
+          "name": "문서 스킬",
+          "when": "Word, Excel, PowerPoint, PDF 파일을 제대로 만드는 방법을 담은 스킬이에요. 보고서를 파일로 받을 때 쓰여요.",
+          "links": [
+            {
+              "label": "Anthropic 스킬 저장소",
+              "url": "https://github.com/anthropics/skills"
+            }
+          ]
+        },
+        {
+          "emoji": "👥",
+          "name": "팀 전용 스킬",
+          "when": "배포 절차, 코드 리뷰 기준, 커밋 메시지 규칙을 적어둔 것이에요. 누가 시켜도 같은 방식으로 일하게 할 때 쓰여요."
+        },
+        {
+          "name": "스킬의 생김새",
+          "when": "설명서 파일(SKILL.md) 하나가 든 폴더가 전부예요. 필요하면 스크립트를 같이 넣어둡니다.",
+          "emoji": "📁",
+          "links": [
+            {
+              "label": "Anthropic 스킬 저장소",
+              "url": "https://github.com/anthropics/skills"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "harness",
@@ -971,7 +1168,58 @@
           }
         ]
       },
-      "discuss": "똑같은 AI 모델을 썼는데도, 웹에서 쓸 때랑 다른 도구에서 쓸 때 결과가 확 달랐던 경험 있으신가요?"
+      "discuss": "똑같은 AI 모델을 썼는데도, 웹에서 쓸 때랑 다른 도구에서 쓸 때 결과가 확 달랐던 경험 있으신가요?",
+      "examples": [
+        {
+          "name": "터미널에서",
+          "when": "Claude Code, Codex CLI, Gemini CLI. 저장소 안에서 파일을 고치고 명령을 실행해요.",
+          "emoji": "⌨️",
+          "links": [
+            {
+              "label": "Claude Code",
+              "url": "https://claude.com/claude-code"
+            },
+            {
+              "label": "Codex CLI",
+              "url": "https://github.com/openai/codex"
+            },
+            {
+              "label": "Gemini CLI",
+              "url": "https://github.com/google-gemini/gemini-cli"
+            }
+          ]
+        },
+        {
+          "name": "에디터 안에서",
+          "when": "Cursor, GitHub Copilot. 코드를 쓰는 화면 옆에서 바로 도와줘요.",
+          "emoji": "📝",
+          "links": [
+            {
+              "label": "Cursor",
+              "url": "https://cursor.com"
+            },
+            {
+              "label": "GitHub Copilot",
+              "url": "https://github.com/features/copilot"
+            }
+          ]
+        },
+        {
+          "name": "채팅 앱도",
+          "when": "ChatGPT, Claude 앱도 하네스예요. 검색, 파일 분석, 기억 기능을 모델에 달아준 것이죠.",
+          "emoji": "💬",
+          "links": [
+            {
+              "label": "ChatGPT",
+              "url": "https://chatgpt.com"
+            },
+            {
+              "label": "Claude",
+              "url": "https://claude.ai"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "team",
@@ -998,7 +1246,30 @@
           "🧾 로그인 서버 로그 살펴보기",
           "🧾 알림 서버 로그 살펴보기"
         ]
-      }
+      },
+      "examples": [
+        {
+          "name": "조사 전담 팀원",
+          "when": "Claude Code는 큰 코드베이스 탐색을 서브에이전트에게 맡기고 결론만 받아요. 팀장의 책상이 깨끗하게 유지됩니다.",
+          "emoji": "🔍",
+          "links": [
+            {
+              "label": "Claude Code",
+              "url": "https://claude.com/claude-code"
+            }
+          ]
+        },
+        {
+          "emoji": "👀",
+          "name": "여러 관점의 코드 리뷰",
+          "when": "보안, 성능, 버그를 각각 다른 팀원이 동시에 살펴봐요."
+        },
+        {
+          "name": "딥 리서치",
+          "when": "여러 에이전트가 주제를 나눠 검색한 뒤 하나의 보고서로 합쳐요.",
+          "emoji": "📚"
+        }
+      ]
     },
     {
       "id": "usage",
@@ -1526,12 +1797,6 @@
             "name": "하네스 (Harness)",
             "text": "이 모든 걸 묶어 모델을 진짜 일하게 만드는 자동차 뼈대"
           }
-        ],
-        "todoTitle": "내일 출근해서 해볼 일",
-        "todos": [
-          "내가 자주 하는 반복 작업을 마크다운 문서나 스킬로 정리해 보기",
-          "평소 쓰는 AI 도구(Cursor, Claude 등)에 우리 회사 관련 MCP 하나 연결해 보기",
-          "AI가 준 답변을 그대로 믿지 않고, '어디서 확인했어?'라고 되물어보기"
         ]
       },
       "discuss": "오늘 체험해 보신 것 중에 '아, 이건 몰랐네!' 하고 가장 의외였던 건 무엇인가요?"

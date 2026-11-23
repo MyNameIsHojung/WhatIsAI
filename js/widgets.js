@@ -294,10 +294,7 @@ function harness(root, d) {
 function outro(root, d) {
   root.append(
     h('div', { class: 'cards' }, d.cards.map((c) => h('div', { class: 'card' },
-      h('span', { class: 'card-emoji' }, c.emoji), h('strong', {}, c.name), h('span', {}, c.text)))),
-    h('h3', {}, d.todoTitle),
-    h('ul', { class: 'todos' }, d.todos.map((t) => h('li', {},
-      h('label', {}, h('input', { type: 'checkbox' }), h('span', {}, t))))));
+      h('span', { class: 'card-emoji' }, c.emoji), h('strong', {}, c.name), h('span', {}, c.text)))));
 }
 
 // 컨텍스트 창: 책상이 꽉 차면 오래된 것부터 밀려난다.

@@ -40,7 +40,7 @@ h3 { font-size: 0.95rem; color: var(--muted); margin: 20px 0 8px; }
 .hero .wrap { display: block; }
 .side { display: contents; }
 .widget { order: 2; }
-.takeaway { order: 3; }
+.sidebtns { order: 3; display: grid; gap: 12px; margin-top: 16px; }
 .head { display: grid; grid-template-columns: 1fr 160px; gap: 24px; align-items: center; margin-bottom: 28px; }
 .kicker { font-weight: 800; color: var(--red); letter-spacing: 0.04em; }
 .lead { font-size: 1.1rem; margin-top: 10px; max-width: 34em; }
@@ -140,7 +140,7 @@ textarea { width: 100%; border: var(--line); border-radius: 12px; padding: 12px;
 .log b { margin-right: 4px; }
 
 /* MCP, 스킬, 하네스, 정리 */
-.caps, .missions, .todos { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.caps, .missions { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .caps li, .missions li { border: var(--line); border-radius: 10px; padding: 6px 12px; background: var(--bg); }
 .caps li.hint { border-style: dashed; margin: 0; }
 .missions li { display: grid; gap: 2px; }
@@ -168,13 +168,7 @@ textarea { width: 100%; border: var(--line); border-radius: 12px; padding: 12px;
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .card { display: grid; gap: 2px; border: var(--line); border-radius: 12px; padding: 14px; background: var(--bg); }
 .card-emoji { font-size: 2rem; }
-.todos label { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
-.todos input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--mint); flex: none; }
-.todos input:checked + span { text-decoration: line-through; color: var(--muted); }
 
-.takeaway { margin-top: 20px; border: var(--line); border-radius: var(--r); background: var(--yellow); padding: 12px 18px; }
-.takeaway summary { cursor: pointer; font-weight: 800; }
-.takeaway p { margin-top: 8px; font-size: 1.08rem; }
 
 @media (max-width: 720px) {
   .sec { padding: 56px 16px; }
@@ -194,7 +188,8 @@ textarea { width: 100%; border: var(--line); border-radius: 12px; padding: 12px;
 
 /* 3부 배경, 시간 표시 */
 .sec.part3 { background: #eafaf4; }
-.discuss { border-top: 2px dashed var(--ink); padding-top: 8px; }
+.sumbody { display: grid; gap: 18px; margin-top: 18px; font-size: 1.35rem; line-height: 1.7; }
+.discuss { border-top: 2px dashed var(--ink); padding-top: 16px; font-size: 1.15rem; }
 
 /* 컨텍스트 창 */
 .desk { display: flex; height: 56px; border: var(--line); border-radius: 12px; overflow: hidden; background: var(--bg); }
@@ -259,7 +254,7 @@ textarea { width: 100%; border: var(--line); border-radius: 12px; padding: 12px;
   .head { grid-template-columns: 1fr; gap: 16px; margin: 0; }
   .head .fig { width: 128px; order: -1; }
   .head .fig-emoji { font-size: 56px; }
-  .takeaway { margin: 0; }
+  .sidebtns { margin: 0; }
   h1 { font-size: 3.8rem; }
   h2 { font-size: 2rem; }
   .lead { font-size: 1.02rem; }
@@ -312,14 +307,44 @@ textarea { width: 100%; border: var(--line); border-radius: 12px; padding: 12px;
 @media (prefers-reduced-motion: reduce) { .edge.on, .piece.fresh { animation: none; } }
 
 /* 목차 */
-.tocbtn { position: fixed; left: 12px; top: 14px; z-index: 10; border: var(--line); border-radius: 999px; background: var(--card); color: var(--ink); padding: 2px 12px; font-weight: 800; font-size: 0.9rem; text-decoration: none; }
+.topbar { position: fixed; left: 12px; top: 14px; z-index: 10; display: flex; gap: 8px; }
+.tocbtn { cursor: pointer; border: var(--line); border-radius: 999px; background: var(--card); color: var(--ink); padding: 2px 12px; font-weight: 800; font-size: 0.9rem; text-decoration: none; }
 .tocbtn:hover { background: var(--yellow); }
 .toc .wrap { display: block; }
 .toc h2 { margin-bottom: 20px; }
 .tocgrid { display: grid; gap: 16px; align-items: start; }
 .toccard { border: var(--line); border-radius: var(--r); box-shadow: var(--shadow); padding: 16px 18px; background: var(--card); }
 .toccard.part2 { background: var(--bg2); } .toccard.part3 { background: #eafaf4; } .toccard.part4 { background: #fff0f3; } .toccard.part5 { background: #fff6d6; }
-.toccard strong { font-size: 1.05rem; }
-.toccard ol { margin: 10px 0 0; padding-left: 1.3em; display: grid; gap: 6px; font-size: 0.95rem; }
+.toccard strong { display: grid; font-size: 1.05rem; line-height: 1.35; white-space: nowrap; }
+.toccard strong span:first-child:not(:last-child) { font-size: 0.85rem; color: var(--red); }
+.toccard ol { margin: 12px 0 0; padding-left: 1.4em; display: grid; gap: 8px; font-size: 1.05rem; font-weight: 600; white-space: nowrap; }
 .toccard a { color: var(--ink); text-decoration: none; border-bottom: 2px solid transparent; }
 .toccard a:hover { border-bottom-color: var(--red); }
+
+/* 실제 사용 예시: 버튼을 누르면 체험 영역 위에 겹쳐서 열리는 패널 */
+.exbtn { text-align: left; cursor: pointer; border: var(--line); border-radius: var(--r); background: var(--card); padding: 12px 18px; font-weight: 800; }
+.exbtn::before { content: "▶ "; }
+.exbtn.summary { background: var(--yellow); }
+.exbtn[aria-expanded="true"] { background: var(--mint); }
+.expanel.summary { background: #fff6d6; }
+.exbtn[aria-expanded="true"]::before { content: "▼ "; }
+.expanel { position: relative; order: 5; margin-top: 16px; border: var(--line); border-radius: var(--r); box-shadow: var(--shadow); background: var(--card); padding: 24px; }
+.expanel > strong { font-size: 1.2rem; }
+.exclose { position: absolute; right: 14px; top: 14px; width: 34px; height: 34px; cursor: pointer; border: var(--line); border-radius: 50%; background: var(--yellow); font-weight: 800; }
+.expanel ul { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.expanel li { display: grid; gap: 2px; align-content: start; border: var(--line); border-radius: 12px; padding: 12px 14px; background: var(--bg); }
+.expanel li b { font-size: 1.05rem; }
+.exicons { display: flex; gap: 8px; align-items: center; height: 34px; font-size: 1.6rem; line-height: 1; }
+.exlinks { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.exlinks a { border: var(--line); border-radius: 999px; padding: 0 10px; background: var(--card); color: var(--ink); font-size: 0.85rem; font-weight: 700; text-decoration: none; }
+.exlinks a:hover { background: var(--yellow); }
+@media (min-width: 721px) {
+  /* 체험과 같은 칸에 놓아 그 위를 덮는다. */
+  .expanel { grid-column: 2; grid-row: 1; z-index: 2; margin: 0; align-self: stretch; }
+  .sec:not(.hero):not(.toc) .wrap > .widget { grid-column: 2; grid-row: 1; }
+  .wrap.ex-open > .widget { visibility: hidden; }
+  .expanel ul { grid-template-columns: 1fr 1fr; }
+}
+
+/* 마지막 인사 화면 */
+#thanks .btn { margin-top: 28px; }
